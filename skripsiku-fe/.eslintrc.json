@@ -1,0 +1,58 @@
+
+{
+	"env": {
+		"browser": true,
+		"commonjs": true,
+		"es6": true,
+		"node": true
+	},
+	"extends": [
+		// "next/core-web-vitals",
+		"next"
+		// "eslint:recommended", // disabled eslint recommended for now
+		// "plugin:react/recommended",
+		// "plugin:react-hooks/recommended",
+		// "prettier"
+	],
+
+	"parserOptions": {
+		"ecmaVersion": 2018,
+		"sourceType": "module",
+		"ecmaFeatures": {
+			"jsx": true
+		}
+	},
+	"settings": {
+		"react": {
+			"version": "detect"
+		}
+	},
+	"plugins": ["react", "react-hooks"],
+	"rules": {
+		"react/react-in-jsx-scope": "off",
+		"react/jsx-filename-extension": [1, { "extensions": [".js", ".jsx",".ts",".tsx"] }], //allow format file js and jsx
+		"react/no-unescaped-entities": "off",
+		"react/jsx-uses-vars": "error",
+		"react/jsx-uses-react": "error",
+		"@next/next/no-page-custom-font": "off",
+		"react/prop-types": "off", // disabled prop-types
+
+		"react-hooks/rules-of-hooks": "off", //disabled rules hooks
+		"react-hooks/exhaustive-deps": "off", //disabled useEffect react-hooks
+		"react/display-name": "off", //disabled  display name function
+
+		"import/no-named-as-default": "off",
+		"import/no-anonymous-default-export": [
+			"error",
+			{
+				"allowArray": true,
+				"allowArrowFunction": true,
+				"allowAnonymousClass": true,
+				"allowAnonymousFunction": true,
+				"allowCallExpression": true, // The true value here is for backward compatibility
+				"allowLiteral": true,
+				"allowObject": true
+			}
+		]
+	}
+}
